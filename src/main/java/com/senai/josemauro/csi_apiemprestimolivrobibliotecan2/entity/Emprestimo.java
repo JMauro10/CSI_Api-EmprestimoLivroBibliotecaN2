@@ -1,12 +1,11 @@
 package com.senai.josemauro.csi_apiemprestimolivrobibliotecan2.entity;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "emprestimos")
-public class Emprestimos {
+public class Emprestimo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,10 +22,10 @@ public class Emprestimos {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    public Emprestimos() {
+    public Emprestimo() {
     }
 
-    public Emprestimos(Long id, Livro livro, Usuario usuario, LocalDate dataEmprestimo, LocalDate dataDevolucaoPrevista, Status status) {
+    public Emprestimo(Long id, Livro livro, Usuario usuario, LocalDate dataEmprestimo, LocalDate dataDevolucaoPrevista, Status status) {
         this.id = id;
         this.livro = livro;
         this.usuario = usuario;
