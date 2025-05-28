@@ -19,6 +19,7 @@ public class UsuarioService {
     }
 
     public Usuario salvarUsuario(Usuario usuario) {
+        usuario.setId(null);
         return usuarioRepository.save(usuario);
     }
 

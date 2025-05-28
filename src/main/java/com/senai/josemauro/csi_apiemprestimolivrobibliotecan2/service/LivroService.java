@@ -16,6 +16,7 @@ public class LivroService {
     }
 
     public Livro salvarLivro(Livro livro) {
+        livro.setId(null);
         return livroRepository.save(livro);
     }
 
